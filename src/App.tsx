@@ -1,6 +1,18 @@
+import styles from './App.module.scss';
+
+import Logo from './components/Logo/Logo';
+import Game from './components/Game/Game';
+
 function App() {
   return (
-    <div>Super Tic-Tac-Toe</div>
+    <div className={styles.App}>
+      <div className={styles.App_Container}>
+        <div className={styles.App_Header}>
+          <Logo />
+        </div>
+        <Game />
+      </div>
+    </div>
   )
 }
 

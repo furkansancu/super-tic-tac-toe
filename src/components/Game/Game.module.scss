@@ -1,0 +1,9 @@
+.Game {
+    aspect-ratio: 1/1;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    user-select: none;
+
+    background-color: #101010;
+}
