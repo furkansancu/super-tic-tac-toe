@@ -5,7 +5,7 @@ import styles from './Game.module.scss';
 import TTT from '../TTT/TTT';
 
 const tttCount = 9;
-const defaultGameState = new Array(tttCount).fill({active: false, winner: false, max: tttCount});
+const defaultGameState = new Array(tttCount).fill({active: true, winner: false, max: tttCount});
 
 function Game() {
   const [gameStates, setGameStates] = useState(defaultGameState);
@@ -13,8 +13,8 @@ function Game() {
 
   return (
     <div className={styles.Game} style={{
-      gridTemplateColumns: new Array(Math.sqrt(tttCount) + 1).join("auto "),
-      gridTemplateRows: new Array(Math.sqrt(tttCount) + 1).join("auto ")
+      gridTemplateColumns: `repeat(${Math.sqrt(tttCount)}, ${100 / Math.sqrt(tttCount)}%)`,
+      gridTemplateRows: `repeat(${Math.sqrt(tttCount)}, ${100 / Math.sqrt(tttCount)}%)`
       }}>
       {games}
     </div>
