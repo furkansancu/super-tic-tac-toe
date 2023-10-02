@@ -1,0 +1,12 @@
+.TTTCell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #313131;
+    font-size: 100%;
+}
+
+.noborderleft { border-left: none; }
+.noborderright { border-right: none; }
+.nobordertop { border-top: none; }
+.noborderbottom { border-bottom: none; }
