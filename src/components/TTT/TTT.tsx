@@ -28,9 +28,9 @@ function TTT (props: any) {
         {props.game[props.table].winner}
       </div>
       <div className={styles.TTT_Tiles} style={{
-      gridTemplateColumns: `repeat(${Math.sqrt(tileCount)}, ${100 / Math.sqrt(tileCount)}%)`,
-      gridTemplateRows: `repeat(${Math.sqrt(tileCount)}, ${100 / Math.sqrt(tileCount)}%)`,
-      opacity: props.game[props.table].winner === false ? 1 : 0.25
+        gridTemplateColumns: `repeat(${Math.sqrt(tileCount)}, ${100 / Math.sqrt(tileCount)}%)`,
+        gridTemplateRows: `repeat(${Math.sqrt(tileCount)}, ${100 / Math.sqrt(tileCount)}%)`,
+        opacity: props.game[props.table].winner ? 0.1 : props.game[props.table].active ? 1 : 0.35
       }}>
         {tiles}
       </div>

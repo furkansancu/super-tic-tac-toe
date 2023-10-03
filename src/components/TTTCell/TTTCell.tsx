@@ -9,9 +9,17 @@ function TTTCell(props: any) {
 
         let newState = props.game;
         newState[props.table].tiles[props.index] = {value: props.turn ? "X" : "0", active: false};
+        const wongame = checkGame();
+        newState = newState.map((x:any) => { return {...x, active: wongame} });
+        if (!wongame) {
+            if (!newState[props.index].winner)
+                newState[props.index].active = true;
+            else
+                newState = newState.map((x:any) => { return {...x, active: true} });
+        }
         props.setgame(newState);
         props.setturn(!props.turn);
-        checkGame();
+        
     }
 
     const checkGame = () => {
@@ -26,8 +34,10 @@ function TTTCell(props: any) {
             if (values.includes(null)) return null;
             if (arrayElementsEqual(values)) {
                 props.wingame(values[0]);
+                return true;
             }
         });
+        return false;
     }
 
     const arrayElementsEqual = (array: Array<any>) => new Set(array).size === 1;
