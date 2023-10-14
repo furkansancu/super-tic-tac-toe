@@ -6,13 +6,14 @@ import styles from './SingleTile.module.scss';
 function SingleTile(props: any) {
     const dispatch = useDispatch();
 
+    const grandWinner = useSelector((state: any) => state.game.grandWinner);
     const turn = useSelector((state: any) => state.game.turn);
     const table = useSelector((state: any) => state.game.table);
     const tableTurn = useSelector((state: any) => state.game.tableTurn);
     const winners = useSelector((state: any) => state.game.winners);
 
     const value = table[props.single][props.index];
-    const active = value === null && (tableTurn === null || tableTurn === props.single || winners[tableTurn] !== null) && winners[props.single] === null;
+    const active = value === null && (tableTurn === null || tableTurn === props.single || winners[tableTurn] !== null) && winners[props.single] === null && grandWinner === null;
 
     const clickHandler = () => {
         if (!active) return null;

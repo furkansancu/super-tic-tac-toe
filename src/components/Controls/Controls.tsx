@@ -1,5 +1,5 @@
 import { useState, forwardRef } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { resetGame } from '../../app/gameReducer';
 
 import Box from '@mui/material/Box';
@@ -25,18 +25,21 @@ const Transition = forwardRef(function Transition(
 
 function Controls() {
     const dispatch = useDispatch();
-
     const [open, setOpen] = useState(false);
 
+    const table = useSelector((state: any) => state.game.table);
+
     const handleClickOpen = () => setOpen(true);
-
     const handleClose = () => setOpen(false);
-
     const reset = () => {dispatch(resetGame()); handleClose();}
+
+    const allEqual = (arr: Array<any>) => arr.every(val => val === arr[0]);
+
+    const buttonActive = !allEqual(table.flat());
 
     return (
         <Box display="flex" justifyContent="center" marginTop={4}>
-            <Button variant="outlined" endIcon={<AutorenewIcon />} onClick={handleClickOpen}>reset game</Button>
+            <Button disabled={!buttonActive} variant="outlined" endIcon={<AutorenewIcon />} onClick={handleClickOpen}>reset game</Button>
             <Dialog
                 open={open}
                 TransitionComponent={Transition}

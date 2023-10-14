@@ -15,8 +15,6 @@ $single-size: calc(33.33% - calc(2 * calc($gap / 3)));
     grid-template-columns: repeat(3, $single-size);
     grid-template-rows: repeat(3, $single-size);
     gap: $gap;
-
-    z-index: 10;
 }
 
 .Winner {
@@ -29,5 +27,4 @@ $single-size: calc(33.33% - calc(2 * calc($gap / 3)));
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 20;
 }

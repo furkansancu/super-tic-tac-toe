@@ -4,7 +4,7 @@ const possibilites = [
     [1,5,9], [7,5,3]
 ];
 
-const allEqual = (arr: Array<any>) => arr.every(val => val === arr[0])
+const allEqual = (arr: Array<any>) => arr.every(val => val === arr[0]);
 
 const TicTacToeVerifier = {
     verify (table: Array<any>) {
