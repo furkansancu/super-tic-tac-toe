@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/super-tic-tac-toe/static/css/main.07ee2968.css",
+    "main.js": "/super-tic-tac-toe/static/js/main.033aa9e0.js",
+    "index.html": "/super-tic-tac-toe/index.html",
+    "main.07ee2968.css.map": "/super-tic-tac-toe/static/css/main.07ee2968.css.map",
+    "main.033aa9e0.js.map": "/super-tic-tac-toe/static/js/main.033aa9e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07ee2968.css",
+    "static/js/main.033aa9e0.js"
+  ]
+}
