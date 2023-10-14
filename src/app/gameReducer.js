@@ -17,9 +17,9 @@ export const updateGame = createSlice({
     updateTile: (state, action) => { state.table[action.payload.single][action.payload.index] = action.payload.value },
     updateTurn: (state) => { state.turn = !state.turn },
     setTableTurn: (state, action) => { state.tableTurn = action.payload },
-    resetGame: (state) => { state = initialState }
+    resetGame: () => initialState
   },
 })
 
-export const { setGrandWinner, setWinner, updateTile, updateTurn, setTableTurn } = updateGame.actions
+export const { setGrandWinner, setWinner, updateTile, updateTurn, setTableTurn, resetGame } = updateGame.actions
 export default updateGame.reducer;
