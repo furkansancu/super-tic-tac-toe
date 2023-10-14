@@ -1,0 +1,40 @@
+@import '../../globals';
+
+$gap: 10px;
+$single-size: calc(33.33% - calc(2 * calc($gap / 3)));
+
+.Single {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    overflow: hidden;
+
+    background-color: $shark-blue;
+    border-radius: 7px;
+    
+    &_Winner {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10em;
+    }
+
+    &_Tiles {
+        display: grid;
+        grid-template-columns: repeat(3, $single-size);
+        grid-template-rows: repeat(3, $single-size);
+        gap: $gap;
+
+        border-radius: 7px;
+        padding: 10px;
+
+        width: 100%;
+        height: 100%;
+    }
+}
