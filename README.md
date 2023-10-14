@@ -1,7 +1,8 @@
 <h1 align="center">Super Tic-Tac-Toe</h1>
 <div align="center">
     <div style="font-weight:bold">An advenced way to play Tic-Tac-toe</div>
-    <div style="font-size:0.85em;margin-bottom:1em;">Ready to play Tic-Tac-Toe inside a Tic-Tac-toe?</div>
+    <div style="font-size:0.85em;margin-bottom:2em;">Ready to play Tic-Tac-Toe inside a Tic-Tac-toe?</div>
+    <a style="cursor: pointer;border: none;padding: 0.5em 1em;border-radius: 5px;background:#0066CC;color:#fff;" href="https://furkansancu.github.io/super-tic-tac-toe/">Let's Play!</a>
 </div>
 
 ## How to play ?
